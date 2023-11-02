@@ -92,6 +92,21 @@ export default {
         this.action = '';
         this.secondNumber = '';
       }
+    },
+
+    deleteAll() {
+      this.firstNumber = '',
+      this.secondNumber = '',
+      this.action = '',
+      this.step = 0
+    },
+
+    deleteItem() {
+      if (this.step == 0) {
+        this.firstNumber = this.firstNumber.slice(0, -1);
+      } if (this.step == 1) {
+        this.secondNumber = this.secondNumber.slice(0, -1);
+      }
     }
   },
   computed: {
